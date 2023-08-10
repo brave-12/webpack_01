@@ -18,6 +18,27 @@ module.exports = {
     module:{
         rules:[
             // loader 的配置
+            {
+                test: /\.css$/i,  // 检测xxx文件(.css结尾文件)
+                // 执行顺序：从右到左(从下到上)
+                use: [
+                 // 将js中css通过创建style标签添加到html文件中生效
+                 "style-loader",
+                 // 将css资源编译成commonjs的模块到js中
+                 "css-loader",
+
+                ],
+            },
+            {
+                test: /\.less$/i,  // 只能使用一个loader
+                use: [
+                  // 使用多个loader
+                  'style-loader',
+                  'css-loader',
+                  'less-loader',  // 将less编译成css文件
+                ],
+            },
+        
         ]
     },
     // plugins（插件）
