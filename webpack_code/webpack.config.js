@@ -49,6 +49,7 @@ module.exports = {
                   'sass-loader',
                 ],
               },
+            // 处理.styl样式资源
             {
             test: /\.styl$/i,
             use: [
@@ -59,6 +60,19 @@ module.exports = {
                 // 将 stylus 编译成 CSS
                 'stylus-loader',
             ],
+            },
+            // 处理图片资源  
+            // Webpack5 已经将file-loader 和 url-loader功能内置到 Webpack 里了，只需要简单配置即可处理图片资源
+            {
+                test: /\.(png|jpe?g|gif|webp)$/,
+                type: "asset",
+                parser: {
+                    dataUrlCondition: {
+                      maxSize: 10 * 1024 // 小于10kb的图片会被base64处理
+                    //   优点：减少请求数量
+                    //   缺点：体积变得更大
+                    }
+                  }
             },
         
         ]
