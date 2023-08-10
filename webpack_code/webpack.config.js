@@ -10,8 +10,11 @@ module.exports = {
     output:{
         // 文件的输出路径  __dirname nodejs的变量  代表当前文件的文件夹目录
         path:path.resolve(__dirname,"dist"),  // 绝对路径
-        // 文件名
-        filename:'main.js'
+        // 入口文件的文件名   前面加一个 js/ 区分每个文件的路径
+        filename:'static/js/main.js',
+        // 自动将上次打包目录资源清空
+        clean: true, 
+
     },
     // loader（加载器）
     // webpack 本身只能处理 js、json 等资源，其他资源需要借助 loader，Webpack 才能解析
@@ -72,7 +75,13 @@ module.exports = {
                     //   优点：减少请求数量
                     //   缺点：体积变得更大
                     }
-                  }
+                },
+                // generator 表示对应文件的保存路径
+                generator:{
+                    // 输出图片名称  hash 是哈希值会填充在点号的前面  ext 是文件格式在逗号后面 query 是一些其他参数
+                    // hash:10 代表只取hash值的前10位
+                    filename:"static/images/[hash:10][ext][query]"
+                }
             },
         
         ]

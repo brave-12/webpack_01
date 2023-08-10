@@ -256,7 +256,7 @@ eval("module.exports = \"data:image/jpeg;base64,R0lGODlhYABQALMAAAAAAMDAwP8zAN3d
   \**************************/
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("module.exports = __webpack_require__.p + \"0c980c1db8a4060c4b5b.png\";\n\n//# sourceURL=webpack://webpack_code/./src/images/1.png?");
+eval("module.exports = __webpack_require__.p + \"static/images/0c980c1db8.png\";\n\n//# sourceURL=webpack://webpack_code/./src/images/1.png?");
 
 /***/ })
 
@@ -362,7 +362,7 @@ eval("module.exports = __webpack_require__.p + \"0c980c1db8a4060c4b5b.png\";\n\n
 /******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
 /******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
 /******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 		__webpack_require__.p = scriptUrl + "../../";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
