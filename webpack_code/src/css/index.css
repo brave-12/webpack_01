@@ -3,5 +3,7 @@
     height: 100px;
     background-color: yellowgreen;
     background-image: url('../images/1.jpeg');
+    /* background-size: cover把背景图扩展至足够大，直至完全覆盖背景区域，
+    图片比例保持不变且不会失真，但某些部分被切割无法显示完整背景图像 */
     background-size: cover;
 }
