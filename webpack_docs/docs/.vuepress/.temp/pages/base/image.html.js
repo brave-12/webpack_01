@@ -43,7 +43,15 @@ export const data = {
       "children": []
     }
   ],
-  "git": {},
+  "git": {
+    "contributors": [
+      {
+        "name": "brave-12",
+        "email": "1310565983@qq.com",
+        "commits": 1
+      }
+    ]
+  },
   "filePathRelative": "base/image.md"
 }
 
