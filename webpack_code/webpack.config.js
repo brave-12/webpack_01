@@ -53,9 +53,16 @@ module.exports = {
           filename: "static/media/[hash:8][ext][query]",
         },
       },
+      // 设置babel对js的编译器  主要用于将 ES6 语法编写的代码转换为向后兼容的 JavaScript 语法
+      {
+        test: /\.js$/,
+        exclude: /node_modules/, // 排除node_modules代码不编译
+        loader: "babel-loader",
+      },
       
     ],
   },
+  // 插件
   plugins: [
     new ESLintWebpackPlugin({
       // 指定检查文件的根目录
